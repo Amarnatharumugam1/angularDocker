@@ -6,7 +6,7 @@ steps:
       - 'sample/Dockerfile'
       - '-t'
       - '$_GCR_HOSTNAME/$PROJECT_ID/$_SERVICE_NAME:$COMMIT_SHA'
-      - '.'
+      - 'sample/'
   - name: 'gcr.io/cloud-builders/docker'
     args:
       - push
